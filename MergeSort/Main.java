@@ -48,7 +48,7 @@ public class Main {
             i++;
             k++;
         } while (j <= right) {
-            a[j] = helpa[j];
+            a[k] = helpa[j];
             j++;
             k++;
         } 
