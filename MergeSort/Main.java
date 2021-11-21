@@ -3,7 +3,7 @@ package MergeSort;
 public class Main {
     public static void main(String[] args) {
 
-        int[] list = {64,56,7655,21,4,8,1,3,744,3333,52};
+        int[] list = {64,56,7655,21,4,8,1,3,744,52,3333};
         printArray(list);
 
         mergeSort(list);

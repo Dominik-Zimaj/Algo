@@ -2,7 +2,7 @@ package BubbleSort;
 
 public class Main {
 
-    static int[] list = {64,56,7655,21,4,8,1,3,744,3333,52};
+    static int[] list = {64,56,7655,21,4,8,1,3,744,52,33333};
     public static void main(String[] args) {
         
         System.out.println("Sorted: ");    
