@@ -14,9 +14,7 @@ public class Main {
         
         //make helper array with size of found max
         int[] helpa = new int[range+1];
-        for (int i : helpa) {
-            helpa[i] = 0;
-        }
+
 
         //find amount of each number and write into helper array
         for (int i=0; i<a.length; i++) {
