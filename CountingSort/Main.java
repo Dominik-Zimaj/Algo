@@ -4,38 +4,37 @@ public class Main {
 
     static int[] list = {4,6,5,21,4,4,4,3,4,2,10};
     public static void main(String[] args) {
-        //find max
-        int max = 0;
-        for (int i : list) {
-            if (i>max) {
-                max = i;
-            }
-        }
+        int[] result = countingSort(list, 21);
+
+        for (int i : result)
+        System.out.println(i);
+    }
+
+    public static int[] countingSort(int[] a, int range) {
         
         //make helper array with size of found max
-        int[] helpa = new int[max+1];
+        int[] helpa = new int[range+1];
         for (int i : helpa) {
             helpa[i] = 0;
         }
 
         //find amount of each number and write into helper array
-        for (int i=0; i<list.length; i++) {
+        for (int i=0; i<a.length; i++) {
             helpa[list[i]]++;
         }
 
-        for (int i = 1; i<max+1; i++) {
+        for (int i = 1; i<range+1; i++) {
             helpa[i] = helpa[i] + helpa[i-1];
         }
 
         //write into original array
         int j=0;
-        for (int i = 0; i<max+1; i++) {
+        for (int i = 0; i<range+1; i++) {
             while(j < helpa[i]) {
-                list[j++] = i;
+                a[j++] = i;
             }
         }
-
-        for (int i : list)
-        System.out.println(i);
+        
+        return a;
     }
 }
